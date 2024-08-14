@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "08cfa41c-4fdd-4bb3-b397-06b55badf84d",
+		"name": "Petstore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28845080"
+	},
+	"item": [
+		{
+			"name": "Добавить кота",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "special-key",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 13,\r\n  \"category\": {\r\n    \"id\": 1,\r\n    \"name\": \"cats\"\r\n  },\r\n  \"name\": \"kotik1\",\r\n  \"photoUrls\": [\r\n    \"https://imgur.com/a/705vW3P\"\r\n  ],\r\n  \"tags\": [\r\n        {\r\n            \"id\": 1,\r\n            \"name\": \"young\"\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"name\": \"cute\"\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"name\": \"fluffy\"\r\n        }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Запрос кота",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "special-key",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet/13",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet",
+						"13"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

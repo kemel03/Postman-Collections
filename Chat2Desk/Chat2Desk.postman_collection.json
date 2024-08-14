@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "4623151f-0fd7-485e-bfb3-c023f45c1f9e",
+		"name": "Chat2Desk",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28845080"
+	},
+	"item": [
+		{
+			"name": "Сообщение по API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "a01b29116f2e9107ca44b000547907",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.chat2desk.com/v1/messages?text=Сообщение по API&client_id=730422637",
+					"protocol": "https",
+					"host": [
+						"api",
+						"chat2desk",
+						"com"
+					],
+					"path": [
+						"v1",
+						"messages"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": "Сообщение по API"
+						},
+						{
+							"key": "client_id",
+							"value": "730422637"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получить клиентов",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "a01b29116f2e9107ca44b000547907",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.chat2desk.com/v1/clients",
+					"protocol": "https",
+					"host": [
+						"api",
+						"chat2desk",
+						"com"
+					],
+					"path": [
+						"v1",
+						"clients"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

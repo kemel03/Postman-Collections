@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "3d00b37d-e353-4bcb-a1a6-fa437530355a",
+		"name": "HeadHunter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28845080"
+	},
+	"item": [
+		{
+			"name": "Поиск компаний",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base}}/employers?text=яндекс&area=1&only_with_vacancies=true",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"employers"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": "яндекс"
+						},
+						{
+							"key": "area",
+							"value": "1"
+						},
+						{
+							"key": "only_with_vacancies",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Поиск компаний по ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base}}/employers/5008932",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"employers",
+						"5008932"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base",
+			"value": "https://api.hh.ru",
+			"type": "string"
+		}
+	]
+}
