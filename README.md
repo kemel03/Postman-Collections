@@ -1,2 +1,2 @@
 # Postman-Collections
-Simple postman requests
+Simple api requests
