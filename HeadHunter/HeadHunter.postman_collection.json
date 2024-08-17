@@ -8,6 +8,24 @@
 	"item": [
 		{
 			"name": "Поиск компаний",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Статус код - 200\", function () {\r",
+							"    pm.expect(pm.response.code, \"Ожидался статус код 200, но был получен: \" + pm.response.code).to.eql(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Время ответа меньше 100 миллисекунд\", function () {\r",
+							"    pm.expect(pm.response.responseTime, \"Время ответа составило: \" + pm.response.responseTime + \" миллисекунд.\").to.be.below(100);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -39,6 +57,24 @@
 		},
 		{
 			"name": "Поиск компаний по ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Статус код - 200\", function () {\r",
+							"    pm.expect(pm.response.code, \"Ожидался статус код 200, но был получен: \" + pm.response.code).to.eql(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Время ответа меньше 100 миллисекунд\", function () {\r",
+							"    pm.expect(pm.response.responseTime, \"Время ответа составило: \" + pm.response.responseTime + \" миллисекунд.\").to.be.below(100);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
